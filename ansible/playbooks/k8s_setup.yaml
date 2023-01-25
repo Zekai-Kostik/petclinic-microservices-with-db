@@ -1,6 +1,6 @@
  hosts: all
-  become: true
-  tasks:
+ become: true
+ tasks:
 
   - name: change hostnames
     shell: "hostnamectl set-hostname {{ hostvars[inventory_hostname]['private_dns_name'] }}"
